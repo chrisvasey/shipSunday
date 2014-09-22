@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"font",
-				"font-size"
+				"mar",
+				"margin-bottom"
 			],
 			[
-				"mar",
-				"margin-left"
+				"text",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
 			],
 			[
 				"card",
@@ -62,10 +66,6 @@
 			[
 				"marg",
 				"margin-left"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"margin",
@@ -303,11 +303,35 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "shipSunday.html",
+			"settings":
+			{
+				"buffer_size": 7175,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2493,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/stylesheet.less",
+			"settings":
+			{
+				"buffer_size": 1741,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 104.0,
 		"selected_items":
 		[
 			[
@@ -367,7 +391,7 @@
 				"Snippet: setTimeout function"
 			]
 		],
-		"width": 451.0
+		"width": 664.0
 	},
 	"console":
 	{
@@ -388,6 +412,8 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/shipSundays/index.html",
+		"/C/wamp/www/shipSundays/pageTemplate.html",
 		"/C/wamp/www/thewilde/development/main/index.php",
 		"/C/wamp/www/RingOfFire/text.txt",
 		"/C/Users/C Vasey/Dropbox/Development/Ring of Fire/script.js",
@@ -513,13 +539,11 @@
 		"/C/wamp/www/chrisvasey.com/temp/js/jquery.slimscroll.min.js",
 		"/C/wamp/www/chrisvasey.com/temp/css/main.less",
 		"/C/wamp/www/chrisvasey.com/main/kivasey.sublime-project",
-		"/C/wamp/www/chrisvasey.com/bootstrap/index.html",
-		"/C/wamp/www/chrisvasey.com/bootstrap/css/stylesheet.less",
-		"/C/Users/C Vasey/Desktop/sms/andorid/viber/.userdata"
+		"/C/wamp/www/chrisvasey.com/bootstrap/index.html"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -533,6 +557,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ul",
 			"headerPhoto",
 			"transition",
 			"content",
@@ -577,6 +602,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"li",
 			"checkbox",
 			"OTRS Username",
 			"gill_sans",
@@ -591,8 +617,99 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "shipSunday.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6929,
+								6929
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3552.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1687,
+								1687
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/stylesheet.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 936.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -638,7 +755,7 @@
 	"project": "ship sundays.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -662,6 +779,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"monks",
+				"C:\\wamp\\www\\projects\\monks.sublime-project"
+			],
 			[
 				"the",
 				"C:\\wamp\\www\\projects\\theWilde-Development.sublime-project"
