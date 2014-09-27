@@ -5,7 +5,7 @@
 		[
 			[
 				"mar",
-				"margin-bottom"
+				"margin-right"
 			],
 			[
 				"text",
@@ -307,7 +307,7 @@
 			"file": "cv.html",
 			"settings":
 			{
-				"buffer_size": 7839,
+				"buffer_size": 7988,
 				"line_ending": "Windows"
 			}
 		},
@@ -315,7 +315,7 @@
 			"file": "css/stylesheet.less",
 			"settings":
 			{
-				"buffer_size": 1764,
+				"buffer_size": 1838,
 				"line_ending": "Windows"
 			}
 		}
@@ -610,7 +610,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -619,15 +619,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7839,
+						"buffer_size": 7988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4053,
-								4053
+								7505,
+								7496
 							]
 						],
 						"settings":
@@ -637,10 +637,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1824.0,
+						"translation.y": 3552.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -649,15 +649,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1764,
+						"buffer_size": 1838,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								86
+								493,
+								493
 							]
 						],
 						"settings":
@@ -666,10 +666,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -741,6 +741,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"ring",
+				"C:\\wamp\\www\\RingOfFire\\ring of fire.sublime-project"
+			],
 			[
 				"eas",
 				"C:\\wamp\\www\\easeCV\\easeCV.sublime-project"

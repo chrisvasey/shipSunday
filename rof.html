@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ring of Fire: Week 2 | Chris Vasey</title>
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.less" type="text/less" media="screen" />
+  
+  <!-- Scripts -->
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+  
+  <!-- Font import -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/fav.ico" type="image/vnd.microsoft.icon" />
+  <link rel="icon" href="images/fav.ico" type="image/vnd.microsoft.icon" />
+
+  <!-- Facebook Share stuff -->
+  <!--   <meta property="og:image" content="images/icon.png" /> -->
+  <meta property="og:title" content="Ship Sunday | Chris Vasey" />
+  <meta property="og:description" content="A project aimed at releasing more projects"/> 
+
+</head>
+<body>
+<div class="container">
+  <div class="col-md-12 header">
+    <div class="row">
+      <h1><span>SHIP</span>SUNDAY</h1>
+    </div>
+    <div class="row">
+      <p class="introText">
+        Ship Sunday is a project by <a href="http://chrisvasey.com">Chris Vasey</a> created to force himself to push more of his work out into the world (otherwise known as shipping).<br>
+        The goal is to create a new entry every week, preferably on a sunday. To see the rest of his projects <a href="index.html">click here</a>
+      </p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container blog">
+  <div class="md-col-12 blogContent">
+    <h2>
+      Week 2: Ring of Fire
+    </h2>
+    <h3>The Concept</h3>
+    <p>
+      So one thing that I seem to be hearing quite a lot recently is about how most people’s CVs either don't do them justice or are substandard with a lot of missing information (though this may be due to the strange amount of recruiters I have ended up following on Twitter).
+      <br><br>
+      I remember when I first put my CV together when I was looking for my first job, it was hard. What do you even put into a CV? Do I just write about what I have done, what I want to do? And what do I need to include that employers need to see such as qualifications and past experience.
+      <br>
+      <br>
+      I was lucky enough to have an employer and recruiter to help me through this but when looking for recourses online I found an overload of useless information and conflicting opinions on what is needed and I hadn't even started writing yet.
+      <br><br>
+      It can be hard.
+      <br><br>
+      For this reason I have started a little project to make the process easier. A small online web tool that helps you get started. No more staring at an intimidating blank word document, just type in the information that is needed into the web form, click "build" and watch as it magically created a nicely formatted curriculum vitae!
+    </p>
+    <p>
+      <h3>Background Research</h3>
+      Before starting to build this project I thought I better first look into what is required in a CV, as really I am no expert at all!
+      <br><br>
+      I headed over to google to source a few templates. <br>
+      after digging around a little, this is a typical example of what I found:
+      <img class="img-responsive" src="images/week1/cv/example1.png" alt="Example of CV 1">
+      <br>
+      <a href="http://www.reed.co.uk/career-advice/blog/2014/january/basic-cv-template">Source</a>
+      <br><br>
+      I downloaded a few more and looked at what they included. Some templates such as these ones included a little bit of information about what should be included or examples of information that could be put in. I saved this as it could be useful later for hinting at what users should input into the form.
+      <br><br>
+      From my research I concluded that the following information is what NEEDS to be included on any CV without a doubt:
+      <ul>
+        <li>
+          Personal Information including full name and contact details (Address, mobile number and email)
+        </li>
+        <li>
+          A little information about yourself (Personal statement if you will) and your key skills including key attributes 
+        </li>
+        <li>
+          Employment History and a little information about each company and role.
+        </li>
+        <li>
+          Education history including School, Uni and other qualifications
+        </li>
+        <li>
+          Interests and other achievements
+        </li>
+        <li>
+          References
+        </li>
+      </ul>
+      So these are what I have chosen the basic input of the form to be.
+    </p>
+    <p>
+      <h3>Basic Goals</h3>
+      The basic goals of the project:
+      <br>
+      <ul>
+        <li>
+          Create an easy to use web app that takes form input and outputs as a styled PDF.
+        </li>
+        <li>
+          Use some design magic to help the user work out what they should be inputting.
+        </li>
+        <li>
+          Verify that the user has completed all required parts of the form before progressing.
+        </li>
+        <li>
+          Present it all in a way where the user understands what is going on.
+        </li>
+      </ul>
+    </p>
+    <p>
+      <h3>The Design Process</h3>
+      I started out by roughly sketching the projects website, I don't go into much design detail at this point as I know functionally there is still a lot to do to make it work. It is good to know roughly what I am doing but sometimes in order to work out what needs to be done, I need to do it. <br>
+      Some more good drawing skills here:
+      <br><br>
+      <img class="img-responsive" src="images/week1/cv/sketch1.png" alt="Inital Sketch of website">
+      <br>
+      I then did something that is a little strange, I made the logo:
+      <br><br>
+      <img class="img-responsive" src="images/week1/cv/workingLogo.png" alt="Inital Sketch of website">
+      <br>
+      After going into so little detail as to how the site is going to be styled on my previous sketch, creating the logo so early may have been a poor move but sometimes you just have to do something when the inspiration strikes, I had a rough idea for the logo while doing the sketch and thought I would make it while it was still fresh in my mind.
+    </p>
+    <p>
+      <h3>Creating the Projects Site</h3>
+      I started out by laying the basic site out again in plain HTML, this is when using the <a href="http://getbootstrap.com/">Twitter Bootstap</a> CSS framework really comes into its own. I was able to create a basic homepage in less than 20 lines of code. Here it is without ANY formatting other than a font change. It still needed a lot of work but when creating something like this it is good to get something physical that you can look at so early in the project.
+      <img class="img-responsive" src="images/week1/cv/home1.png" alt="Rought version of homepage">
+      <br>
+      I straight away saw that even without styling and all the content added the site was going to be pretty dull to land on. I quickly came up with a really over the top solution to this and animated the logo using CSS. <br>
+      After a little bit of css transitions and some class toggles: <br>
+      <img class="imgCenter" src="images/week1/cv/aniLogo.gif" alt="">
+    </p>
+    
+  </div>
+</div>
+
+<div class="container blogFooter">
+  <div class="col-md-12 footerContent">
+    <hr>
+    <h1><a href="http://chrisvasey.com">Contact me</a></h1>
+    </ul>
+  </div>
+</div>
+  
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
