@@ -312,6 +312,14 @@
 			}
 		},
 		{
+			"file": "rof.html",
+			"settings":
+			{
+				"buffer_size": 7484,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "css/stylesheet.less",
 			"settings":
 			{
@@ -626,8 +634,8 @@
 						"selection":
 						[
 							[
-								7505,
-								7496
+								0,
+								7988
 							]
 						],
 						"settings":
@@ -637,7 +645,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3552.0,
+						"translation.y": 1135.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -645,6 +653,37 @@
 				},
 				{
 					"buffer": 1,
+					"file": "rof.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2274,
+								2274
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1560.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "css/stylesheet.less",
 					"semi_transient": false,
 					"settings":
@@ -656,8 +695,8 @@
 						"selection":
 						[
 							[
-								493,
-								493
+								619,
+								619
 							]
 						],
 						"settings":
@@ -669,7 +708,7 @@
 						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -742,6 +781,14 @@
 		"selected_items":
 		[
 			[
+				"ki",
+				"C:\\wamp\\www\\kivasey\\kivasey.sublime-project"
+			],
+			[
+				"the",
+				"C:\\wamp\\www\\projects\\theWilde-Development.sublime-project"
+			],
+			[
 				"ring",
 				"C:\\wamp\\www\\RingOfFire\\ring of fire.sublime-project"
 			],
@@ -752,10 +799,6 @@
 			[
 				"monks",
 				"C:\\wamp\\www\\projects\\monks.sublime-project"
-			],
-			[
-				"the",
-				"C:\\wamp\\www\\projects\\theWilde-Development.sublime-project"
 			],
 			[
 				"",
@@ -782,7 +825,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 215.0,
 	"status_bar_visible": true,
 	"template_settings":
