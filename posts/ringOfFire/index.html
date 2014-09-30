@@ -15,6 +15,9 @@
   <!-- Scripts -->
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+
+  <!-- Prism Syntax Highlighter -->
+  <link rel="stylesheet" href="../../css/prism.css">
   
   <!-- Font import -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -83,7 +86,148 @@
       <h3>Inital Planning</h3>
       I had a rough idea of how the app was going to look, I tried to keep as little screens as possible and in the end narrowed it down to just the 4: menu, play screen, rules and info. <br>
       So as with every project I started out with a simple sketch of the interface:
-      <img clas="img-responsive" src="images/sketch.png" alt="Inital sketch in illistrator">
+      <img clas="img-responsive" src="images/sketch.png" alt="Inital sketch in illustrator">
+      by sketching out how each screen is going to look this allows me to quickly reference a layout once I move into code, this makes it a LOT easier.
+      <br><br>
+      This is where things start getting a little technical. Due to the small amount of screens needed I chose to keep this a single page application. This means having all the screens on the same page but hiding all that are not needed and showing the one that is needed. <br>
+      For example when a button is clicked in a single page application: 
+      <img class="img-responsive" src="images/singlePage.png" alt="Single Page application diagram"> 
+      <br> 
+    </p>
+    <p>
+      <h3>Creating the App</h3>
+      For creating the app I have chosen to use the same framework stack as I did for this website:
+      <ul>
+        <li>
+          <a href="http://getbootstrap.com/">Twitter Bootstrap:</a> CSS Framework and Responsive Grid System
+        </li>
+        <li>
+          <a href="http://lesscss.org/">LESS.js:</a> CSS Pre-processor 
+        </li>
+        <li>
+          <a href="http://jquery.com/">jQuery:</a> Javascript Framework
+        </li>
+        <li>
+          <a href="https://www.google.com/fonts">Google Fonts:</a> Font API
+        </li>
+        <li>
+          <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome:</a> Icon CDN
+        </li>
+        <li>
+          <a href="https://www.digitalocean.com/">Digital Ocean</a> Web Hosting
+        </li>
+      </ul>
+      I have chosen to use this stack as it is what I am familiar with and allowing me to develop and troubleshoot issues faster. <br>
+      After cloning my <a href="https://github.com/chrisvasey/blankStack">blank stack</a> from Github, I got straight on with the project.
+    </p>
+    <p>
+      <h3>Developing the Interface</h3>
+      I first started by creating a basic style guide. This allowed me to worry less about how the app looked as I developed it with just needing to go back and tweak specific elements later. <br>
+      This included setting the following:
+      <ul>
+        <li>Font Family: <a href="https://www.google.com/fonts/specimen/Lato">Lato</a></li>
+        <li>Accent Colour: <span style="color: #e74c3c">#e74c3c</span> (same red as this site)</li>
+        <li>Card Images: <a href="http://opengameart.org/content/playing-cards-vector-png">Opengames</a> </li>
+        <li>Other stuff such as font size</li>
+      </ul>
+      After setting this up I created the following screens based on the sketch I had made: <br>
+      <img style="border: 1px solid black" class="img-responsive" src="images/finalScreens.png" alt="Final app screens">
+      each button carried out the show/hide funcation that is discribed above to make sure the reliavnt screen is visable.
+    </p>
+    <p>
+      <h3>Creating the Game function</h3>
+      This part was the hardest. When it comes to development I am more of a front end styling kind of guy, I love working in CSS and JS but sometimes I struggle with basic concepts that I skipped over when learning.
+      <br> <br>
+      I thought the best way to do this part was to use two random number generator, from here I shall call them dice rolls. <br>
+      Dice roll 1 was to determine the cards suit. Every time the "next card" button is pressed, a number is generated between 1-4 this being: 
+      <ol>
+        <li>Spades</li>
+        <li>Hearts</li>
+        <li>Clubs</li>
+        <li>Diamonds</li>
+      </ol>
+      The second dice roll was used to determine the card number, this roll was between 1-13 with 11 = jack, 12 = Queen etc.
+      <br>
+      My first mistake here was to use a "switch" statement rather than an "else if" but I shall get to that later. <br>
+      The switch function is simple, it looks for a rule and if it is met, it executes the next block of code, if none are met, the code block called "default" is executed. <br>
+      For example here is the code for working out the suit:
+      <pre>
+        <code class="language-javascript">
+          randSuit = function(){
+            var x = Math.floor(Math.random()*4) + 1
+            switch(x){
+                
+                case x = 1:    
+                    var suit = "spades";
+                break;
+                    
+                case x = 2:    
+                    var suit = "hearts";
+                break;
+                    
+                case x = 3:    
+                    var suit = "clubs";
+                break;
+                    
+                case x = 4:    
+                    var suit = "diamonds";
+                break;
+                
+                default:
+                    var suit = "Shit it broke";
+                break;
+            };
+            return(suit);
+          };
+        </code>
+      </pre>
+      As you can see I used the default value to log an error message.
+      <br><br>
+      After returning both a "randSuit" and "randNum" variables, I then add them together and use them to specify what card needs to be shown. The cards files names will be "1_of_hearts.png" so I after adding all the static information such as underscores and file extension as strings is a simple case of adding them together and changing what background file the Cards CSS points at.
+      <pre>
+        <code class="language-javascript">
+          cardPull = function(){
+              //Adding stuff needed for file name
+              card = "url(images/cards/"+randNum()+"_of_"+randSuit()+".png)";
+              //Setting card background
+              $(".card").css('background', card);
+          };
+        </code>
+      </pre>
+      This function is then excited every time the "next card" button is pressed or if the card its self is clicked.
+    </p>
+    <p>
+      <h3>Running HTML as a Native app on Andoid Devices</h3>
+      One of the cooler things I was able to do was use <a href="https://cordova.apache.org/">Cordova</a> to turn the HTML, CSS and JS files into a native app that I can run on my Nexus 5, I won't go much into this process but if you follow the documentation this is a really easy procss.
+    </p>
+    <p>
+      <h3>Constraints</h3>
+      Some bugs I have found after testing on different devices:
+      <ul>
+        <li>Random cards are not generated on iOS devices (completely broken)</li>
+        <li>On older iOS devices that do not run JS easily such as iPhone 4 on iOS 6 the app won't load</li>
+        <li>Windows phones running IE will not load this app</li>
+        <li>Original function that removed cards from the deck after they had been used is broken (removed)</li>
+      </ul>
+      One of the most annoying bugs here is the fact that the app will not run on iOS within the browser. I have been told this may be due to iOS not liking switch statements, this is most annoying as most of my target audience will be using iPhones. 
+    </p>
+    <p>
+      <h3>Planned Features</h3>
+      Although this is more of a personal app, I do plan on doing an update for it soon to fix the known bugs and add a few more features. Here is what is currently planned:
+      <ul>
+        <li>Fix app on iOS</li>
+        <li>Add "Cards Remaining" function again to stop card being reused and games lasting forever</li>
+        <li>Display the rule of each card on the play screen as they are pulled from the deck</li>
+        <li>Release native android app on the play store (after everything is fixed and I have gained more feedback)</li>
+      </ul>
+    </p>
+    <p>
+      <h3>Conclusion</h3>
+      So overall I find the project a scusess, there were some challanging bits and one major bug (damn you iOS) that has put a bit on a dampener on it all but I shall fix this in the near future. <br>
+      The link to the app is <a href="http://chrisvasey.com/ringOfFire/">here</a>. Feel free to open on your computer too. <br><br>
+      Happy Drinking!
+      <br><br>
+      Posted on 30/09/14
     </p>
   </div>
 </div>
@@ -100,5 +244,6 @@
 ================================================== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/prism.js"></script>
 </body>
 </html>
